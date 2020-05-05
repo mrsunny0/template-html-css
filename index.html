@@ -6,30 +6,123 @@
         
         <!-- fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:100,300,400,700,900" rel="stylesheet">
 
         <!-- icons  -->
+        <script src="https://kit.fontawesome.com/11d31d0b11.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
 
         <!-- images -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
-        <title>Title</title>
+        <title>Homepage</title>
     </head>
     <body>
+
+        <!-- NAVIGATION -->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__label">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                </ul>
+            </nav>
+        </div>
         
         <!-- HEADER -->
         <header class="header">
-            <div></div>
+            <div class="header__logo-box"></div>
+            <div class="header__main">
+                <div class="header__text-box">
+                    <h1 class="heading-primary">
+                        <span class="heading-primary--main">George Sun</span>
+                        <span class="heading-primary--sub">Some Description About Yourself</span>
+                    </h1>
+                </div>
+                <div class="header__icon-box">
+                    <ul class="header__icon-list">
+                        <li class="header__icon-item">
+                            <a href="#" class="header__icon-link">
+                                <i class="header__icon-image fa fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li class="header__icon-item">
+                            <a href="#" class="header__icon-link">
+                                <i class="header__icon-image fa fa-linkedin-square"></i>
+                            </a>
+                        </li>
+                        <li class="header__icon-item">
+                            <a href="#" class="header__icon-link">
+                                <i class="header__icon-image fa fa-github-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#section-features" class="header__next-section">
+                    <span class="icon fa fa-chevron-down"></span>
+                </a>
+                </div>
+            </div>
+            <div class="header__background-image" id="header__background-image"></div>
         </header>
 
         <!-- MAIN -->
         <main>
-            <section class="section"></section>
+            <section class="section-features" id="section-features">
+                <!-- Heading -->
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary u-margin-bottom-small">
+                        Heading 1
+                    </h2>
+                    <p class="paragraph">
+                        Lorem ipsum dolor 
+                    </p>
+                </div>
+
+                <!-- Feature Items -->
+                <div class="row">
+                    <div class="feature">
+                        <ul class="feature__list">
+                            <li class="feature__item">
+                                <div class="feature__group">
+                                    <h3 class="feature__heading heading-tertiary u-margin-bottom-medium">Some heading</h3>
+                                    <div class="feature__container-img ">
+                                        <figure class="feature__figure">
+                                            <img src="https://via.placeholder.com/300" alt="" class="feature__figure-img">
+                                            <figcaption class="feature__figure-caption">
+                                                Caption
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="feature__figure-dots">
+                                        <span class='dot'></span>
+                                    </div>
+                                    <p class="feature__paragraph u-margin-top-medium">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, aspernatur architecto laborum minima voluptatem perspiciatis blanditiis sed animi minus necessitatibus adipisci similique! Nesciunt distinctio nulla voluptas quia recusandae officia accusantium.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!-- FOOTER -->
         <footer></footer>
+
+        <!-- POPUPS -->
         
     </body>
 </html>

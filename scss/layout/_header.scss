@@ -1,3 +1,122 @@
 .header {
-    height: 95vh;
+
+    &__background-image {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+
+        // background-color: $color-primary;
+        background-image: url(https://via.placeholder.com/1500x900.png);
+        background-position: top;
+        background-size: cover;
+
+        // animation
+        filter: blur(0);
+        transition: all .2s;
+
+        z-index: -1;
+
+        &:hover {
+            background-image: url(https://via.placeholder.com/900.png);
+            filter: blur(100px);
+            -webkit-filter: blur(100px);
+        }
+    }
+
+    // LOGO BOX
+    &__logo-box {
+        display: none; // unhide if logo exists
+    }
+
+    // HEADER MAIN
+    &__main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: 100%;
+    }
+
+    // TEXT BOX
+    &__text-box {
+        position: relative;
+        top: 40%;
+        width: 100%;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    // ICON BOX
+    &__icon-box {
+        position: relative;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__icon-list {
+        list-style: none;
+    }
+    
+    &__icon-item {
+        // alignment
+        // float: left;
+        display: inline-block;
+
+        // margins on each element
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+    
+    &__icon-link {
+        text-align: center;
+        &:link,
+        &:visited,
+        &:hover,
+        &:active  {
+            text-decoration: none;
+        }
+    }
+
+    &__icon-image {
+        font-size: 3rem; 
+        display: inline-block;
+        padding: 1rem;
+        color: $color-white;
+
+        // transition
+        border: 0.3rem solid $color-white;
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+
+    // ANIMATIONS
+    &__icon-link:hover &__icon-image {
+        color: $color-black;
+        background-color: $color-white;
+    }
+
+    // NEXT SECTION
+    &__next-section {
+        // position
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+
+        // decoration
+        text-decoration: none;
+        font-size: 2.5rem;
+        color: $color-white;
+
+        // animation
+        animation-name: constantUpDown;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0;
+        animation-iteration-count: infinite;
+    }
 }
