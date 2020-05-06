@@ -6,7 +6,7 @@
         
         <!-- fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,900" rel="stylesheet">
 
         <!-- icons  -->
         <script src="https://kit.fontawesome.com/11d31d0b11.js" crossorigin="anonymous"></script>
@@ -16,6 +16,9 @@
         <!-- images -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+        <!-- js libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/sweet-scroll@4.0.0/sweet-scroll.min.js"></script>
         
         <title>Homepage</title>
     </head>
@@ -45,6 +48,7 @@
         <!-- HEADER -->
         <header class="header">
             <div class="header__logo-box"></div>
+            <div class="header__background-image" id="header__background-image"></div>
             <div class="header__main">
                 <div class="header__text-box">
                     <h1 class="heading-primary">
@@ -76,7 +80,6 @@
                 </a>
                 </div>
             </div>
-            <div class="header__background-image" id="header__background-image"></div>
         </header>
 
         <!-- MAIN -->
@@ -99,20 +102,53 @@
                             <li class="feature__item">
                                 <div class="feature__group">
                                     <h3 class="feature__heading heading-tertiary u-margin-bottom-medium">Some heading</h3>
-                                    <div class="feature__container-img ">
-                                        <figure class="feature__figure">
-                                            <img src="https://via.placeholder.com/300" alt="" class="feature__figure-img">
-                                            <figcaption class="feature__figure-caption">
-                                                Caption
-                                            </figcaption>
-                                        </figure>
+
+                                    <!-- carousel -->
+                                    <div class="slideshow">
+                                        <div class="slideshow__item">
+                                            <figure class="slideshow__figure">
+                                                <img src="https://via.placeholder.com/300" alt="" class="slideshow__figure-img">
+                                                <figcaption class="slideshow__figure-caption">
+                                                    Caption
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="slideshow__item">
+                                            <figure class="slideshow__figure">
+                                                <img src="https://via.placeholder.com/300" alt="" class="slideshow__figure-img">
+                                                <figcaption class="slideshow__figure-caption">
+                                                    Caption
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="slideshow__item">
+                                            <figure class="slideshow__figure">
+                                                <img src="https://via.placeholder.com/300" alt="" class="slideshow__figure-img">
+                                                <figcaption class="slideshow__figure-caption">
+                                                    Caption
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+
+                                        <div class="slideshow__arrow-container">
+                                            <a href="#" class="slideshow__arrow slideshow__arrow--left">&#10094;</a>
+                                            <a href="#" class="slideshow__arrow slideshow__arrow--right">&#10095;</a>
+                                        </div>
+
+                                        <div class="slideshow__dot-nav">
+                                            <span class="slideshow__dot"></span>
+                                            <span class="slideshow__dot"></span>
+                                            <span class="slideshow__dot"></span>
+                                        </div>
+
                                     </div>
-                                    <div class="feature__figure-dots">
-                                        <span class='dot'></span>
-                                    </div>
+                                    <!-- end-carousel -->
+                                    
                                     <p class="feature__paragraph u-margin-top-medium">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, aspernatur architecto laborum minima voluptatem perspiciatis blanditiis sed animi minus necessitatibus adipisci similique! Nesciunt distinctio nulla voluptas quia recusandae officia accusantium.</p>
                                 </div>
                             </li>
+                            <li class="feature__item"></li>
+                            <li class="feature__item"></li>
                         </ul>
                     </div>
                 </div>
@@ -123,6 +159,9 @@
         <footer></footer>
 
         <!-- POPUPS -->
+
+        <!-- JS LIBRARIES -->
+        <script src="js/scroll.js"></script>
         
     </body>
 </html>

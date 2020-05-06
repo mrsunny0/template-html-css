@@ -12,17 +12,8 @@
         background-position: top;
         background-size: cover;
 
-        // animation
-        filter: blur(0);
-        transition: all .2s;
-
+        // hide behind elements
         z-index: -1;
-
-        &:hover {
-            background-image: url(https://via.placeholder.com/900.png);
-            filter: blur(100px);
-            -webkit-filter: blur(100px);
-        }
     }
 
     // LOGO BOX
@@ -33,26 +24,21 @@
     // HEADER MAIN
     &__main {
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 100%;
-        width: 100%;
     }
 
     // TEXT BOX
     &__text-box {
-        position: relative;
-        top: 40%;
         width: 100%;
-        margin-bottom: 3rem;
+        padding: 3rem;
         text-align: center;
     }
 
     // ICON BOX
     &__icon-box {
         position: relative;
-        top: 40%;
         width: 100%;
         text-align: center;
     }
@@ -63,12 +49,11 @@
     
     &__icon-item {
         // alignment
-        // float: left;
         display: inline-block;
 
-        // margins on each element
-        &:not(:last-child) {
-            margin-right: 3rem;
+        &:not(:last-child):not(:first-child) {
+            margin-right: 1.5rem;
+            margin-left: 1.5rem;
         }
     }
     
@@ -103,9 +88,13 @@
     // NEXT SECTION
     &__next-section {
         // position
+        display: block;
         position: absolute;
-        left: 50%;
-        bottom: 5%;
+        width: 100%;
+
+        // text-align: center;
+        // display: block;
+        text-align: center;
 
         // decoration
         text-decoration: none;
@@ -118,5 +107,5 @@
         animation-timing-function: ease-in-out;
         animation-delay: 0;
         animation-iteration-count: infinite;
-    }
+    } 
 }
