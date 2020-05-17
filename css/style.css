@@ -153,61 +153,70 @@ body {
 .feature__heading {
   display: block; }
 
-.feature__container-img {
-  display: inline-block;
-  width: 50%;
-  text-align: center; }
-
-.feature__figure {
-  position: relative;
-  margin: 0 auto;
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%); }
-
-.feature__figure-img {
-  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  backface-visibility: hidden;
-  transform: scale(1.4);
-  transition: all .5s; }
-
-.feature__figure-caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  font-size: 1.4rem;
-  color: #fff;
-  opacity: 0;
-  transition: all 0.4s;
-  backface-visibility: hidden; }
-
 .feature__paragraph {
   font-size: 1.4rem;
   font-weight: 300;
   display: inline-block;
   width: 80%; }
 
-.feature__container-img:hover .feature__figure-img {
-  transform: scale(1);
-  filter: blur(2px) brightness(90%); }
-
-.feature__container-img:hover .feature__figure-caption {
-  transform: translate(-50%, -50%);
-  opacity: 1; }
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease; }
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .slideshow__item:not(:first-child) {
+    display: none; }
+  .slideshow__figure {
+    position: relative;
+    height: 60%;
+    width: 60%;
+    margin: 0 auto;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%); }
+  .slideshow__figure-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 10rem 10rem black;
+    backface-visibility: hidden;
+    transform: scale(1.25);
+    transition: all .5s; }
+  .slideshow__figure-caption {
+    color: #000;
+    font-size: 1.7;
+    text-transform: uppercase;
+    text-align: center;
+    top: 50%;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .slideshow__arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    text-decoration: none;
+    color: #999; }
+  .slideshow__arrow--left {
+    text-align: left;
+    left: 0; }
+  .slideshow__arrow--right {
+    text-align: right; }
+  .slideshow__dot-nav {
+    padding: 2rem 0; }
+  .slideshow__dot {
+    display: inline-block;
+    height: .9rem;
+    width: .9rem;
+    background: #999;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s; }
+    .slideshow__dot:not(:last-child) {
+      margin-right: 1.5rem; }
+  .slideshow__figure:hover .slideshow__figure-img {
+    transform: scale(1.1);
+    filter: blur(2px) brightness(80%); }
 
 .row {
   max-width: 114rem;
@@ -342,35 +351,24 @@ body {
   background-image: url(https://via.placeholder.com/1500x900.png);
   background-position: top;
   background-size: cover;
-  filter: blur(0);
-  transition: all .2s;
   z-index: -1; }
-  .header__background-image:hover {
-    background-image: url(https://via.placeholder.com/900.png);
-    filter: blur(100px);
-    -webkit-filter: blur(100px); }
 
 .header__logo-box {
   display: none; }
 
 .header__main {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  height: 100%;
-  width: 100%; }
+  transform: translate(-50%, -50%); }
 
 .header__text-box {
-  position: relative;
-  top: 40%;
   width: 100%;
-  margin-bottom: 3rem;
+  padding: 3rem;
   text-align: center; }
 
 .header__icon-box {
   position: relative;
-  top: 40%;
   width: 100%;
   text-align: center; }
 
@@ -379,8 +377,9 @@ body {
 
 .header__icon-item {
   display: inline-block; }
-  .header__icon-item:not(:last-child) {
-    margin-right: 3rem; }
+  .header__icon-item:not(:last-child):not(:first-child) {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem; }
 
 .header__icon-link {
   text-align: center; }
@@ -401,9 +400,10 @@ body {
   background-color: #fff; }
 
 .header__next-section {
+  display: block;
   position: absolute;
-  left: 50%;
-  bottom: 5%;
+  width: 100%;
+  text-align: center;
   text-decoration: none;
   font-size: 2.5rem;
   color: #fff;
