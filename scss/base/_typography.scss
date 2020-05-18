@@ -1,61 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Josefin+Slab|Antic+Slab');
+
 body {
-    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    color: $color-default-text;
+    
+    font-family: 'Antic Slab', serif;
     font-weight: 400;
-    line-height: 1.25;
-
-    // set box-sizing rather than inherentings
-    box-sizing: border-box;
-
-    // user defaults
-    color: $color-grey-dark-1;
 }
 
-.heading-primary {
+// ------------------------------------ //
 
-    &--main {
-        text-transform: uppercase;
-        display: block;
-        font-size: 7rem;
-        font-weight: 700;
-        letter-spacing: .8rem;
-        // letter-spacing: 3.5rem;
-    }
+.banner {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading {
+    width: 90%;
+    margin: .5rem auto;
+    text-align: center;
     
-    &--sub {
-        text-transform: initial;
-        display: block;
-        font-size: 3.5rem;
-        font-weight: 300;
-        // letter-spacing: 1.5rem;
+    &--primary {
+        font-size: 4rem;
+        font-weight: 100;
+        text-transform: uppercase;
     }
 
-    // user defaults
-    color: $color-white;
+    &--sub {
+        font-size: 2.5rem;
+    }
 }
 
 .heading-secondary {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: inline-block; 
-    letter-spacing: .2rem;
-}
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: capitalize;
 
-.heading-tertiary {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    display: inline-block;
-    letter-spacing: .2rem;
-}
+    &--inline {
+        display: inline-block;
+    }
 
-.paragraph {
-    font-size: $default-font-size;
-    &:not(:last-child) {
-        margin-bottom: 3rem;
+    @include respond(phone-tab) {
+        font-size: 2rem;
+    }
+
+    @include respond(phone) {
+        font-size: 1.5rem;
     }
 }
 
-.icon {
-    font-size: 3.5rem;
+.paragraph {
+    font-size: 1.6rem;
+    text-transform: none;
+
+    &--inline {
+        display: inline-block;
+    }
+
+    &--justify {
+        text-align: justify;
+    }
+
+    @include respond(phone-tab) {
+        font-size: 1.2rem;
+    }
+
+    @include respond(phone) {
+        font-size: 0.8rem;
+    }
+}
+
+.highlight {
+    color: $color-highlight;
+}
+
+// ------------------------------------ //
+
+h1, h2, h3, h4, stong {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    line-height: 1.25;
+    color: $color-header-text;
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1rem;
+}
+sup, sub {
+    line-height: 0;
+}
+
+
+// ------------------------------------ //
+
+a.ref-hover {
+    display: inline-block;
+    transition: all 0.2s;
+    &:hover {
+        transform: translateY(-2px);
+    }
+    
+    &:active {
+        transform:translateY(1px);
+    }
 }

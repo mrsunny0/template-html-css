@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -29,9 +31,33 @@ html {
 
 body {
     box-sizing: border-box;
-    padding: 3rem;
+    margin: 0;
+    padding: 0;
 
     @include respond(tab-port) {
         padding: 0;
     }
+}
+
+article, aside, figcaption, figure, footer, header, nav, section {
+    display: block;
+}
+
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 40px;
+}
+p, figure {
+    margin: 1rem 0;
+}
+a {
+    color: $link-color;
+}
+a img {
+    border: none;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
 }
