@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- meta -->
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+
+        <!-- google analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics.id }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '{{ site.google-analytics.id }}');
+        </script>
         
         <!-- fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
@@ -12,6 +24,7 @@
         <script src="https://kit.fontawesome.com/11d31d0b11.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
         <!-- images -->
         <link rel="stylesheet" href="css/style.css">
@@ -25,140 +38,26 @@
     <body>
 
         <!-- NAVIGATION -->
+        <nav></nav>
         <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-
-            <label for="navi-toggle" class="navigation__label">
-                <span class="navigation__icon">&nbsp;</span>
-            </label>
-
-            <div class="navigation__background">&nbsp;</div>
-
             <nav class="navigation__nav">
                 <ul class="navigation__list">
                     <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
                     <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
                     <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
                 </ul>
-            </nav>
         </div>
         
         <!-- HEADER -->
-        <header class="header">
-            <div class="header__logo-box"></div>
-            <div class="header__background-image" id="header__background-image"></div>
-            <div class="header__main">
-                <div class="header__text-box">
-                    <h1 class="heading-primary">
-                        <span class="heading-primary--main">George Sun</span>
-                        <span class="heading-primary--sub">Some Description About Yourself</span>
-                    </h1>
-                </div>
-                <div class="header__icon-box">
-                    <ul class="header__icon-list">
-                        <li class="header__icon-item">
-                            <a href="#" class="header__icon-link">
-                                <i class="header__icon-image fa fa-envelope"></i>
-                            </a>
-                        </li>
-                        <li class="header__icon-item">
-                            <a href="#" class="header__icon-link">
-                                <i class="header__icon-image fa fa-linkedin-square"></i>
-                            </a>
-                        </li>
-                        <li class="header__icon-item">
-                            <a href="#" class="header__icon-link">
-                                <i class="header__icon-image fa fa-github-alt"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <a href="#section-features" class="header__next-section">
-                    <span class="icon fa fa-chevron-down"></span>
-                </a>
-                </div>
-            </div>
-        </header>
+        <header class="header"></header>
 
         <!-- MAIN -->
-        <main>
+        <main class="main">
             <section class="section-features" id="section-features">
-                <!-- Heading -->
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary u-margin-bottom-small">
-                        Heading 1
-                    </h2>
-                    <p class="paragraph">
-                        Lorem ipsum dolor 
-                    </p>
-                </div>
-
-                <!-- Feature Items -->
-                <div class="row">
-                    <div class="feature">
-                        <ul class="feature__list">
-                            <li class="feature__item">
-                                <div class="feature__group">
-                                    <h3 class="feature__heading heading-tertiary u-margin-bottom-medium">Some heading</h3>
-
-                                    <!-- carousel -->
-                                    <div class="slideshow">
-                                        <div class="slideshow__item">
-                                            <figure class="slideshow__figure">
-                                                <img src="https://via.placeholder.com/300" alt="" class="slideshow__figure-img">
-                                                <figcaption class="slideshow__figure-caption">
-                                                    Caption
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        <div class="slideshow__item">
-                                            <figure class="slideshow__figure">
-                                                <img src="https://via.placeholder.com/300" alt="" class="slideshow__figure-img">
-                                                <figcaption class="slideshow__figure-caption">
-                                                    Caption
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        <div class="slideshow__item">
-                                            <figure class="slideshow__figure">
-                                                <img src="https://via.placeholder.com/300" alt="" class="slideshow__figure-img">
-                                                <figcaption class="slideshow__figure-caption">
-                                                    Caption
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-
-                                        <div class="slideshow__arrow-container">
-                                            <a href="#" class="slideshow__arrow slideshow__arrow--left">&#10094;</a>
-                                            <a href="#" class="slideshow__arrow slideshow__arrow--right">&#10095;</a>
-                                        </div>
-
-                                        <div class="slideshow__dot-nav">
-                                            <span class="slideshow__dot"></span>
-                                            <span class="slideshow__dot"></span>
-                                            <span class="slideshow__dot"></span>
-                                        </div>
-
-                                    </div>
-                                    <!-- end-carousel -->
-                                    
-                                    <p class="feature__paragraph u-margin-top-medium">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, aspernatur architecto laborum minima voluptatem perspiciatis blanditiis sed animi minus necessitatibus adipisci similique! Nesciunt distinctio nulla voluptas quia recusandae officia accusantium.</p>
-                                </div>
-                            </li>
-                            <li class="feature__item"></li>
-                            <li class="feature__item"></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
         </main>
 
         <!-- FOOTER -->
-        <footer></footer>
-
-        <!-- POPUPS -->
+        <footer class="footer"></footer>
 
         <!-- JS LIBRARIES -->
         <script src="js/scroll.js"></script>
